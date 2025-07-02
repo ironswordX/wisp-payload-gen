@@ -3,7 +3,19 @@
   "version": "1.0.0",
   "description": "A simple HTTP request/payload generator for the Wisp protocol.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:all": "npm run build:cjs && npm run build:esm && npm run build:types",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:types"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.cjs",
+      "types": "./dist/types"
+    }
   },
   "repository": {
     "type": "git",
