@@ -3,6 +3,9 @@
   "compilerOptions": {
     "module": "ESNext",
     "outDir": "./dist/esm",
-    "declaration": false
+    "declaration": false,
+    "declarationMap": false,
+    "emitDeclarationOnly": false,
+    "declarationDir": null
   }
 }

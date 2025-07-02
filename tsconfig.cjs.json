@@ -3,6 +3,9 @@
   "compilerOptions": {
     "module": "CommonJS",
     "outDir": "./dist/cjs",
-    "declaration": false
+    "declaration": false,
+    "declarationMap": false,
+    "emitDeclarationOnly": false,
+    "declarationDir": null
   }
 }

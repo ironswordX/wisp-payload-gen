@@ -1,0 +1,1 @@
+{"version":3,"file":"post-payload.d.ts","sourceRoot":"","sources":["../../../src/payload-constructors/post-payload.ts"],"names":[],"mappings":"AACA,OAAO,EAAuB,KAAK,YAAY,EAAE,MAAM,mBAAmB,CAAC;AAM3E,MAAM,CAAC,OAAO,UAAU,YAAY,CAAC,WAAW,EAAE,YAAY,EAAE,IAAI,EAAE,OAAO,GAAG,MAAM,CASrF"}
