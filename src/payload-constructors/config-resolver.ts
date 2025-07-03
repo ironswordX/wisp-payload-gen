@@ -1,5 +1,5 @@
-import type { Base_Payload_Args } from "../payload-types/payload.types";
-import { Base_Request_Payload } from "./payload";
+import type { Base_Payload_Args } from "../payload-types/payload.types.ts";
+import { Base_Request_Payload } from "./payload.ts";
 export type PayloadInput = string | Base_Payload_Args;
 export function Resolve_Args_Or_URL(input: PayloadInput): Base_Payload_Args {
     var returnVal = {

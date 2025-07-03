@@ -1,4 +1,4 @@
-# wisp-payload- v1.0.1
+# wisp-payload-gen v1.0.3
 Generate HTTP "payloads" (requests) for use with wisp-js (and it's derivatives).
 
 ## Using on web

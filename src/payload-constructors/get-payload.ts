@@ -1,5 +1,5 @@
-import type { Get_Payload as PayloadType } from "../payload-types/get-payload";
-import { Resolve_Args_Or_URL, type PayloadInput } from "./config-resolver";
+import type { Get_Payload as PayloadType } from "../payload-types/get-payload.ts";
+import { Resolve_Args_Or_URL, type PayloadInput } from "./config-resolver.ts";
 import * as PayloadBuilder from "./payload";
 const configDefaults: Partial<PayloadBuilder.Base_Payload_Args> = {
     http_ver: "1.1",

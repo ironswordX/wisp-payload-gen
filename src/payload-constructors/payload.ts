@@ -1,5 +1,5 @@
-import type { Base_Payload } from "../payload-types/payload.types";
-export type { Base_Payload, Base_Payload_Args } from "../payload-types/payload.types";
+import type { Base_Payload } from "../payload-types/payload.types.ts";
+export type { Base_Payload, Base_Payload_Args } from "../payload-types/payload.types.ts";
 export function Request_Terminate_Headers(headers: string[]): void {
     headers[headers.length-1] += "\r\n";
     return void 0;
