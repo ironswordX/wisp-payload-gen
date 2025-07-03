@@ -1,1 +1,0 @@
-{"version":3,"file":"post-payload.d.ts","sourceRoot":"","sources":["../../../src/payload-types/post-payload.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,iBAAiB,EAAE,MAAM,iBAAiB,CAAC;AACzD,MAAM,WAAW,YAAa,SAAQ,iBAAiB;IACnD,YAAY,EAAE,MAAM,CAAC;IACrB,cAAc,EAAE,MAAM,CAAC;IACvB,IAAI,EAAE,MAAM,CAAC;CAChB"}
