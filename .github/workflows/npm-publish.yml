@@ -17,6 +17,10 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build:all
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: ./dist  # or whatever your build output is
 
   publish-npm:
     needs: build
@@ -29,6 +33,11 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - name: Download dist
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: ./dist  # download into the right place
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
