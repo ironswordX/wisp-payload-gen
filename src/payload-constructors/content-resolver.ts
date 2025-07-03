@@ -1,4 +1,4 @@
-import { Request_Add_Header } from "./payload.ts";
+import { Request_Add_Header } from "./payload";
 export interface Content_Data {
     mime: string;
     length: number;

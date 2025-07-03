@@ -1,7 +1,7 @@
-import type { Post_Payload as PayloadType } from "../payload-types/post-payload.ts";
-import { Resolve_Args_Or_URL, type PayloadInput } from "./config-resolver.ts";
-import * as ContentResolver from "./content-resolver.ts";
-import * as PayloadBuilder from "./payload.ts";
+import type { Post_Payload as PayloadType } from "../payload-types/post-payload";
+import { Resolve_Args_Or_URL, type PayloadInput } from "./config-resolver";
+import * as ContentResolver from "./content-resolver";
+import * as PayloadBuilder from "./payload";
 const configDefaults: Partial<PayloadType> = {
     http_ver: "1.1",
 };

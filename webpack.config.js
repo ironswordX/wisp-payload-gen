@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-  entry: './src/index.ts',
+  entry: '/src/index.ts',
   output: {
     filename: 'wisp_payload_gen.js',
     path: path.resolve(__dirname, 'dist/web'),

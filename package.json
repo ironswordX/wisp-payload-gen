@@ -5,18 +5,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:types": "tsc --emitDeclarationOnly",
-    "postbuild:esm": "find dist/esm -type f -name 'index.js' -exec bash -c 'mv \"$1\" \"${1%.js}.mjs\"' _ {} \\;",
-    "build:esm": "tsc --project tsconfig.esm.json && npm run postbuild:esm",
-    "postbuild:cjs": "find dist/cjs -name '*.js' -exec bash -c 'mv \"$0\" \"${0%.js}.cjs\"' {} \\;",
-    "build:cjs": "tsc --project tsconfig.cjs.json && npm run postbuild:cjs",
+    "build:esm": "tsup --config tsup-esm.config.js",
+    "build:cjs": "tsup --config tsup-cjs.config.js && find dist/cjs -type f -name '*.js' -exec bash -c 'mv \"$0\" \"${0%.js}.cjs\"' {} \\;",
     "build:web": "webpack --mode=production",
-    "build:all": "npm run build:esm && npm run build:cjs && npm run build:web && npm run build:types"
+    "build:all": "npm run build:esm && npm run build:cjs && npm run build:web"
   },
   "exports": {
     ".": {
+      "types": "./dist/types",
       "import": "./dist/esm/index.mjs",
-      "require": "./dist/cjs/index.cjs",
-      "types": "./dist/types"
+      "require": "./dist/cjs/index.cjs" 
     }
   },
   "repository": {
@@ -35,5 +33,8 @@
     "typescript": "^5.8.3",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "tsup": "^8.5.0"
   }
 }
