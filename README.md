@@ -2,10 +2,10 @@
 Generate HTTP "payloads" (requests) for use with wisp-js (and it's derivatives).
 
 ## Using on web
-Using this package on web is actually quite simple. You can find the web version of the package at [/dist/web/wisp_payload_gen,js](https://github.com/ironswordX/wisp-payload-gen/blob/f751e4d76df5eba0a01ba19b5d053a183e14dc5c/dist/web/wisp_payload_gen.js). From there you can either paste the code into the wisp package or another version of it (i.e. epoxy), or download it as a file and run it that way. After that, you can access the module and it's functions via the wisp_payload_gen object attached to the root window object.
+Using this package on web is actually quite simple. You can find the web version of the package at `/dist/web/wisp_payload_gen,js` in the NPM repository. From there you can either paste the code into the wisp package or another version of it (i.e. epoxy), or download it as a file and run it that way. After that, you can access the module and it's functions via the wisp_payload_gen object attached to the root window object.
 
 ## Using in NodeJS/TypeScript
-There currently is no npm package for this. If you're really technical, you can download this repo and import it yourself.
+You can use the library with CommonJS and MJS imports via the npm repo: https://www.npmjs.com/package/wisp-payload-gen
 
 ## Examples
 All of these examples assume that you have already connected to a wisp server, and that the connection object is named `conn`.
