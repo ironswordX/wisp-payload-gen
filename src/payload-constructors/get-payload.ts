@@ -8,6 +8,5 @@ export default function Get_Payload(configInput: PayloadInput): string {
     const parsedInput: PayloadBuilder.Base_Payload_Args = Resolve_Args_Or_URL(configInput);
     const config = { type: "GET", ...parsedInput, ...configDefaults } as PayloadBuilder.Base_Payload;
     var payload = PayloadBuilder.Base_Request_Payload(config);
-    PayloadBuilder.Request_Terminate_Headers(payload);
     return PayloadBuilder.Assemble_Payload(payload);
 }

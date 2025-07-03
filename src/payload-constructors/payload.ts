@@ -10,7 +10,9 @@ export function Request_Add_Header(headers: string[], name: string, value: strin
 }
 export function Request_Add_Body(headers: string[], body: string): void {
     if (headers[headers.length-1].endsWith("\r\n\r\n")) {
-        headers.push(body);
+        // noop
+    } else if (headers[headers.length-1].endsWith("\r\n")) {
+        headers[headers.length-1] += "\r\n"
     }
     return void 0;
 }

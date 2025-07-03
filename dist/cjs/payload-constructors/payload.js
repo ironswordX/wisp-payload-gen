@@ -15,7 +15,10 @@ function Request_Add_Header(headers, name, value) {
 }
 function Request_Add_Body(headers, body) {
     if (headers[headers.length - 1].endsWith("\r\n\r\n")) {
-        headers.push(body);
+        // noop
+    }
+    else if (headers[headers.length - 1].endsWith("\r\n")) {
+        headers[headers.length - 1] += "\r\n";
     }
     return void 0;
 }
