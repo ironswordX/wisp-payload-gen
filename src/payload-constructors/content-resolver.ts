@@ -4,7 +4,7 @@ export interface Content_Data {
     length: number;
     content: string;
 }
-export function Resolve_Request_Body(obj: unknown): Content_Data {
+export function Resolve_Request_Body(obj: unknown, contentType?: string): Content_Data {
     var cData: Content_Data = {
         mime: "",
         length: 0,
@@ -12,12 +12,12 @@ export function Resolve_Request_Body(obj: unknown): Content_Data {
     } 
     if (typeof obj === "object" && obj !== null) {
         const cast = obj as { mime?: string; type?: string; data?: string; content?: string; };
-        cData.mime = cast.mime || cast.type || "text/plain";
+        cData.mime = cast.mime || cast.type || contentType || "text/plain";
         cData.content = cast.data || cast.content || "";
         cData.length = Buffer.byteLength(cData.content, "utf8");
     } else if (typeof obj === "string") {
         const cast = obj as string;
-        cData.mime = "text/plain";
+        cData.mime = contentType || "text/plain";
         cData.content = obj;
         cData.length = Buffer.byteLength(obj, "utf8");
     }
