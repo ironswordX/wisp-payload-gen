@@ -1,6 +1,6 @@
 {
   "name": "wisp-payload-gen",
-  "version": "1.0.3",
+  "version": "1.3.1",
   "description": "A simple HTTP request/payload generator for the Wisp protocol.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
