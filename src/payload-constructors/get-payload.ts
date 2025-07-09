@@ -13,6 +13,7 @@ export default function Get_Payload(configInput: PayloadInput, headers: Record<s
         for (var i = 0; i < keys.length; i++) {
             PayloadBuilder.Request_Add_Header(payload, keys[i], headers[keys[i]]);
         }
+        PayloadBuilder.Request_Terminate_Headers(payload);
     }
     return PayloadBuilder.Assemble_Payload(payload);
 }
